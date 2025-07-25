@@ -147,8 +147,8 @@ class ImageMeuralizer
     # Apply strong gaussian blur to make background unrecognizable
     background.blur "0x95"  # radius x sigma - much stronger blur
 
-        # Apply swirl effect for additional abstraction (more compatible than radial blur)
-    background.swirl "270"  # degrees of swirl distortion
+        # Apply wave distortion for organic, flowing abstraction (without spiral patterns)
+    background.wave "4x40"  # amplitude=4, wavelength=40 - creates gentle flowing patterns
 
     # Apply strong gaussian blur to make background unrecognizable
     background.blur "0x95"  # radius x sigma - much stronger blur
@@ -321,7 +321,7 @@ def main
     end
 
     opts.on("-v", "--version", "Show version") do
-      puts "Meuralize v1.0.0"
+      puts "Meuralize v2.0.0 - Professional Gallery Edition"
       exit
     end
   end.parse!
