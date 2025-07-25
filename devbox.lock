@@ -1,0 +1,154 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2025-06-29T07:09:35Z",
+      "resolved": "github:NixOS/nixpkgs/a48741b083d4f36dd79abd9f760c84da6b4dc0e5?lastModified=1751180975&narHash=sha256-BKk4yDiXr4LdF80OTVqYJ53Q74rOcA%2F82EClXug8xsY%3D"
+    },
+    "imagemagick@latest": {
+      "last_modified": "2025-07-21T09:58:03Z",
+      "resolved": "github:NixOS/nixpkgs/2baf8e1658cba84a032c3a8befb1e7b06629242a#imagemagick",
+      "source": "devbox-search",
+      "version": "7.1.2-0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ji9hv3mjpw8n6v02bkwsivn4r0gpbcr4-imagemagick-7.1.2-0",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/yxv2pdmb95409g1sdshvhvcskz3nvg0z-imagemagick-7.1.2-0-doc"
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/5cigwl2xc00kdn4ai4cmibqaprhlfaxx-imagemagick-7.1.2-0-dev"
+            }
+          ],
+          "store_path": "/nix/store/ji9hv3mjpw8n6v02bkwsivn4r0gpbcr4-imagemagick-7.1.2-0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3sl01x097b9slvp41ndczb4yxly63zh7-imagemagick-7.1.2-0",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/74j99qf6kna414n3s305x7xr1mm35aa8-imagemagick-7.1.2-0-dev"
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/jjx42lxykq3d9zch9xk3j3q8zyvpw2yi-imagemagick-7.1.2-0-doc"
+            }
+          ],
+          "store_path": "/nix/store/3sl01x097b9slvp41ndczb4yxly63zh7-imagemagick-7.1.2-0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4695s3b6rqsv0fmw46yskv52f9nmab3v-imagemagick-7.1.2-0",
+              "default": true
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/khc0w8v07vldnchgrmpj8jvbja2jxrbc-imagemagick-7.1.2-0-doc"
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/9v7fii062f9nvq6wic4p5aaz880g1fhr-imagemagick-7.1.2-0-dev"
+            }
+          ],
+          "store_path": "/nix/store/4695s3b6rqsv0fmw46yskv52f9nmab3v-imagemagick-7.1.2-0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/q45pdyfmh2mb5525pkibylcfl8ygnf97-imagemagick-7.1.2-0",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/szfzal0l76svw7axn3sq8qx6wdiq1akp-imagemagick-7.1.2-0-dev"
+            },
+            {
+              "name": "doc",
+              "path": "/nix/store/947pqc42yhccyd1qwm2mv7pg5zykngzi-imagemagick-7.1.2-0-doc"
+            }
+          ],
+          "store_path": "/nix/store/q45pdyfmh2mb5525pkibylcfl8ygnf97-imagemagick-7.1.2-0"
+        }
+      }
+    },
+    "ruby@latest": {
+      "last_modified": "2025-07-17T10:11:59Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/fa0ef8a6bb1651aa26c939aeb51b5f499e86b0ec#ruby_3_4",
+      "source": "devbox-search",
+      "version": "3.4.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0kmigp0a142apvl22wb16vfs1h2sfxqz-ruby-3.4.5",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/7r42cwwpzmha5fxixagmmnbq28kwfn6m-ruby-3.4.5-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/0kmigp0a142apvl22wb16vfs1h2sfxqz-ruby-3.4.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fp9mxxs2mgf11fb6w60far22c859kdy7-ruby-3.4.5",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/mf3lib9bfp2b4m7x9891aakgzzxv5s7f-ruby-3.4.5-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/fp9mxxs2mgf11fb6w60far22c859kdy7-ruby-3.4.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3szxcsq7vfsk5lklz1hvnpiqvvd38qlw-ruby-3.4.5",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/bpqmgxp2vd6j6220wrh5kzh1m178bwpb-ruby-3.4.5-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/3szxcsq7vfsk5lklz1hvnpiqvvd38qlw-ruby-3.4.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2v7pnml25q3d7m7bc9xaz16g3xsbj70l-ruby-3.4.5",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/26bgx29z1clw05swbyzp5x901z41npy7-ruby-3.4.5-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/2v7pnml25q3d7m7bc9xaz16g3xsbj70l-ruby-3.4.5"
+        }
+      }
+    }
+  }
+}
