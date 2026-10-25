@@ -9,6 +9,7 @@ class ImageMeuralizer
   TARGET_ASPECT_RATIO = 16.0 / 9.0
   SUPPORTED_FORMATS = %w[.jpg .jpeg .png .bmp .tiff .tif].freeze
   MAX_FILE_SIZE_MB = 20
+  MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
 
   def initialize(folder_path)
     @folder_path = Pathname.new(folder_path)
@@ -70,7 +71,13 @@ class ImageMeuralizer
       current_aspect_ratio = image.width.to_f / image.height.to_f
 
       if aspect_ratio_close_to_target?(current_aspect_ratio)
-        puts "  ✓ Already 16:9 aspect ratio, skipping"
+        if File.size(file_path) <= MAX_FILE_SIZE_BYTES
+          puts "  ✓ Already 16:9 aspect ratio, skipping"
+          return
+        end
+
+        puts "  → Already 16:9 aspect ratio but over #{MAX_FILE_SIZE_MB}MB, creating size-limited Meural version"
+        save_meural_version(file_path, image)
         return
       end
 
@@ -100,17 +107,20 @@ class ImageMeuralizer
     # Composite the images
     result = composite_images(background, foreground, target_width, target_height)
 
-        # Save the result
+    save_meural_version(original_path, result)
+  end
+
+  def save_meural_version(original_path, image)
     output_path = generate_output_path(original_path)
     unless output_path
       puts "  ✗ Could not generate output path"
       return
     end
 
-    result.write(output_path.to_s)
+    image.write(output_path.to_s)
 
         # Check and reduce file size if needed
-    ensure_file_size_limit(output_path, result)
+    ensure_file_size_limit(output_path, image)
 
     # Show final file size
     final_size_mb = (File.size(output_path) / 1024.0 / 1024.0).round(1)
@@ -213,7 +223,7 @@ class ImageMeuralizer
   end
 
     def ensure_file_size_limit(file_path, image)
-    max_size_bytes = MAX_FILE_SIZE_MB * 1024 * 1024
+    max_size_bytes = MAX_FILE_SIZE_BYTES
     min_width = 1920
     min_height = 1080
 

@@ -7,7 +7,7 @@ A Ruby script that processes images to create stunning 16:9 aspect ratio version
 For each image in a given folder, the script:
 
 1. **Checks the aspect ratio** - Determines if the image is already 16:9
-2. **Skips if already correct** - Leaves 16:9 images unchanged
+2. **Skips if already correct** - Leaves 16:9 images under 20MB unchanged; 16:9 images over 20MB get a size-optimized `-meural` copy
 3. **Creates Meural version** - For non-16:9 images, generates a new file with:
    - Original filename + "-meural" suffix (e.g., `photo.jpg` → `photo-meural.jpg`)
    - Perfect 16:9 aspect ratio canvas
